@@ -1,0 +1,9 @@
+@use "../../../app/variables" as var;
+
+.haeder--section {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: var.$header--height;
+  border-bottom: 1px solid #761aff;
+}

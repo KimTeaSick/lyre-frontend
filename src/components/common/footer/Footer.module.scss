@@ -1,0 +1,31 @@
+@use "../../../app/variables" as var;
+
+.footer--section-on {
+  position: fixed;
+  width: 80%;
+  bottom: 3%;
+  left: calc((100% - 80%) / 2);
+  border-radius: 25px;
+  box-shadow: var.$shadow-footer;
+  height: var.$footer--height;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}
+
+.footer--section-off {
+  position: fixed;
+  left: 3%;
+  bottom: 3%;
+  border-radius: 25px;
+  width: var.$footer--height;
+  box-shadow: var.$shadow-footer;
+  height: var.$footer--height;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}

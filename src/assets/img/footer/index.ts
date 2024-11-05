@@ -1,0 +1,9 @@
+export { default as BTN_SHARE } from "./btn_shared.svg";
+export { default as BTN_LETTER } from "./btn_letter.svg";
+export { default as BTN_REQUEST } from "./btn_request.svg";
+export { default as BTN_COMMENT } from "./btn_comment.svg";
+export { default as BTN_HOME } from "./tab_01.svg";
+export { default as BTN_SEARCH } from "./tab_02.svg";
+export { default as BTN_CLOSE } from "./tab_03.svg";
+export { default as BTN_BOX } from "./tab_04.svg";
+export { default as BTN_MY } from "./tab_05.svg";
