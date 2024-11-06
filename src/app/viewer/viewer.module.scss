@@ -1,0 +1,10 @@
+@use "../variables" as var;
+.page-viewer {
+  display: flex;
+  justify-content: center;
+  @include var.page-footer();
+}
+
+.pdf-full-size {
+  height: 100%;
+}

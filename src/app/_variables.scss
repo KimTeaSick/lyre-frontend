@@ -35,17 +35,14 @@ $shadow-footer: 0px 0px 50px 1px rgba(118, 26, 255, 0.1);
   margin-bottom: $footer--height;
   margin-top: $header--height;
   box-sizing: border-box;
-  padding: 10px;
 }
 
 @mixin page-header() {
   margin-top: $header--height;
   box-sizing: border-box;
-  padding: 10px;
 }
 
 @mixin page-footer() {
   margin-bottom: $footer--height;
   box-sizing: border-box;
-  padding: 10px;
 }
