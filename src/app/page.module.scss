@@ -1,7 +1,17 @@
 @use "./variables" as var;
 
 .page {
-  margin-top: var.$header--height;
-  margin-bottom: var.$footer--height;
-  padding: 20px;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  img {
+    width: 94px;
+    height: 44px;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: calc((100% - 94px) / 2);
+  top: calc((100% - 44px) / 3);
 }

@@ -24,7 +24,6 @@ const page = () => {
         pdfRef.current!.style.height = Math.floor(viewport.height) + "px";
         var transform =
           outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
-
         var renderContext = {
           canvasContext: context,
           transform: transform,
