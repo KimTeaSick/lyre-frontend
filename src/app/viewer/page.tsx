@@ -1,3 +1,4 @@
+// eslint-disabled
 "use client";
 import { useEffect, useRef } from "react";
 import styles from "./viewer.module.scss";
@@ -14,8 +15,7 @@ export default function page() {
       const pdfJS = await import("pdfjs-dist/build/pdf"!);
       const path = "./pdf.worker.min.mjs";
       // Set up the worker.
-      pdfJS.GlobalWorkerOptions.workerSrc =
-        window.location.origin + "/pdf.worker.min.mjs";
+      pdfJS.GlobalWorkerOptions.workerSrc = window.location.origin + path;
 
       // Load the PDF document.
       const pdf = await pdfJS.getDocument("asdasd.pdf").promise;

@@ -2,3 +2,12 @@
 .page-home {
   @include var.page-header-footer();
 }
+
+.home-top--section {
+  @include var.flex(flex-start);
+  @include var.size(calc(100% - 20px), 160px);
+  background: white;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+}

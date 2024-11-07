@@ -1,0 +1,12 @@
+@use "../../app/variables" as var;
+
+.home--button-main {
+  gap: 15px;
+  @include var.size(159px, 139px);
+  @include var.flex(center, center, column);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  // border: 1px solid var.$color-border;
+  box-shadow: var.$shadow-object;
+}
