@@ -2,7 +2,7 @@ import React from "react";
 
 const TypingZone = () => {
   return (
-    <div className="relative flex">
+    <div className="relative">
       <textarea className="absolute z-10 bg-transparent" />
       <textarea placeholder="qwe absolute" className="absolute bg-green-50" />
     </div>
