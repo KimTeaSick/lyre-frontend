@@ -1,5 +1,3 @@
-import React from "react";
-
 const TypingZone = () => {
   return (
     <div className="relative">
