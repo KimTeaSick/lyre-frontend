@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import { wrongText } from "../utils/wrongText";
 import { useTypingInfo } from "../modules";
 import { calculateWPM } from "../utils/calculateWPM";
@@ -17,23 +17,13 @@ const TypingZone = ({ content }: Props) => {
   const [startTime, setStartTime] = useState<number | null>(null);
 
   // 입력값 변경 핸들러
-  const changeHandler = useCallback(
-    (text: string) => {
+  const changeHandler = (text: string) => {
       if (!startTime) setStartTime(performance.now()); // 첫 입력 시 시작 시간 설정
-      setValue(text);
+      typingInfo.setWpm(calculateWPM(value, startTime!));
       setWrong(wrongText(content, text));
-    },
-    [startTime, setStartTime, setValue]
-  );
+      setValue(text);
+    }
 
-  // WPM 계산을 실시간으로 업데이트
-  useEffect(() => {
-    if (!startTime) return;
-    const intervalId = setInterval(() => {
-      typingInfo.setWpm(calculateWPM(value, startTime));
-    }, 1000); // ✅ 1초마다 WPM 업데이트 (100ms → 1000ms 수정)
-    return () => clearInterval(intervalId); // ✅ 컴포넌트 언마운트 시 정리
-  }, [value, startTime, typingInfo]); // ✅ startTime 의존성 추가하여 중복 생성 방지
 
   return (
     <div className="relative xl:w-[970px]">

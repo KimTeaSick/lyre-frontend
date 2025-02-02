@@ -10,8 +10,7 @@ const Info = ({title}:Props) => {
   return (
     <div className='flex gap-2 font-mono w-full'>
         <div>{title}</div>
-        <div>page</div>
-        <div>{typingInfo.WPM}</div>
+        <div className='text-[#F08A16]'>{typingInfo.WPM}</div>
     </div>
   )
 }
